@@ -1,0 +1,778 @@
+/* =========================
+RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Baloo 2', cursive;
+    overflow-x:hidden;
+    background:#eef8ff;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+    border:none;
+}
+
+/* =========================
+OPENING
+========================= */
+
+#opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+
+    background-image:
+        url('../images/baground.png');
+
+    background-size:cover;
+    background-position:center;
+
+    overflow:hidden;
+}
+
+.opening-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.opening-content{
+    text-align:center;
+    width:min(100%,380px);
+}
+
+/* =========================
+TEXT
+========================= */
+
+.party-label{
+
+    color:white;
+
+    font-family:'Lilita One',cursive;
+
+    font-size:22px;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+}
+
+.child-name{
+
+    margin-top:10px;
+
+    font-family:'Lilita One',cursive;
+
+    font-size:62px;
+
+    line-height:1;
+
+    color:white;
+
+    text-shadow:
+    0 5px 0 #0058d6,
+    0 10px 20px rgba(0,0,0,.25);
+}
+
+.turning-one{
+    margin-top:10px;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:600;
+}
+
+.event-date{
+    margin-top:10px;
+
+    color:white;
+
+    font-size:18px;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+#openBtn{
+
+    margin-top:25px;
+
+    background:white;
+
+    color:#2563eb;
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.2);
+
+    transition:.3s;
+}
+
+#openBtn:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+BUBBLE
+========================= */
+
+#bubbleContainer{
+    position:absolute;
+    inset:0;
+}
+
+.bubble{
+    position:absolute;
+
+    bottom:-120px;
+
+    animation-name:bubbleRise;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+
+    opacity:.8;
+}
+
+.bubble.small{
+    width:20px;
+}
+
+.bubble.medium{
+    width:40px;
+}
+
+.bubble.large{
+    width:70px;
+}
+
+@keyframes bubbleRise{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+
+}
+
+/* =========================
+MAIN
+========================= */
+
+#mainContent{
+
+    display:none;
+
+    min-height:100vh;
+
+    background-image:
+    url('../images/baground2.png');
+
+    background-size:cover;
+
+    background-position:center top;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+}
+
+/* =========================
+HERO
+========================= */
+
+#heroSection{
+    padding:80px 20px;
+}
+
+.container{
+    width:min(100%,500px);
+    margin:auto;
+}
+
+.hero-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.12);
+}
+
+.hero-photo{
+
+    width:220px;
+    height:220px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+}
+
+.hero-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.hero-title{
+
+    margin-top:20px;
+
+    font-family:'Lilita One',cursive;
+
+    font-size:52px;
+
+    color:#2563eb;
+}
+
+.hero-subtitle{
+
+    margin-top:12px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#16a34a;
+
+    letter-spacing:1px;
+}
+
+.hero-song{
+
+    margin-top:10px;
+
+    color:#ff7b00;
+
+    font-size:20px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .child-name{
+        font-size:48px;
+    }
+
+    .hero-title{
+        font-size:42px;
+    }
+
+}
+/* ==========================
+SECTION
+========================== */
+
+.section{
+    padding:20px;
+}
+
+.container{
+    width:min(100%,500px);
+    margin:auto;
+}
+
+/* ==========================
+COUNTDOWN
+========================== */
+
+.countdown-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+.countdown-card h2{
+
+    font-family:'Lilita One',cursive;
+
+    font-size:32px;
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 3px 10px rgba(37,99,235,.2);
+}
+.countdown-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:10px;
+}
+
+.count-box{
+
+    background:#eef6ff;
+
+    padding:15px 10px;
+
+    border-radius:18px;
+}
+
+.count-box span{
+
+    display:block;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2563eb;
+}
+
+.count-box small{
+
+    font-size:12px;
+}
+
+/* ==========================
+EVENT
+========================== */
+
+.event-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+.event-card h2{
+
+    font-family:'Lilita One',cursive;
+
+    font-size:32px;
+
+    color:#ff7b00;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 3px 10px rgba(255,123,0,.2);
+}
+
+.event-item{
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#334155;
+
+    line-height:1.7;
+
+    margin-bottom:15px;
+}
+
+/* ==========================
+BUTTON
+========================== */
+
+.action-btn{
+
+    display:block;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:18px;
+}
+
+.maps-btn{
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #0ea5e9
+    );
+
+    box-shadow:
+    0 8px 20px rgba(37,99,235,.35);
+}
+
+.wa-btn{
+
+    background:
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+    );
+
+    box-shadow:
+    0 8px 20px rgba(34,197,94,.35);
+}
+/* ==========================
+WAVE
+========================== */
+
+.wave-divider{
+
+    height:60px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255,255,255,.5)
+    );
+}
+
+/* ==========================
+CARD UPGRADE
+========================== */
+
+.hero-card,
+.countdown-card,
+.event-card,
+.thanks-card{
+
+    backdrop-filter:blur(10px);
+
+    border:2px solid rgba(255,255,255,.6);
+}
+
+/* ==========================
+THANKS
+========================== */
+
+.thanks-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+.thanks-card h2{
+
+    font-family:'Lilita One',cursive;
+
+    font-size:34px;
+
+    color:#2563eb;
+
+    text-shadow:
+    0 3px 10px rgba(37,99,235,.25);
+}
+
+.thanks-card p{
+
+    line-height:1.7;
+
+    margin-bottom:15px;
+}
+
+.thanks-card h3{
+
+    color:#ff7b00;
+}
+
+.thanks-shark{
+
+    width:120px;
+
+    margin:auto auto 20px;
+
+    animation:
+    sharkFloat 4s ease-in-out infinite;
+}
+
+@keyframes sharkFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+.hero-bubbles{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.hero-bubbles span{
+
+    position:absolute;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.8);
+
+    animation:
+    heroBubble 4s infinite ease-in-out;
+}
+
+.hero-bubbles span:nth-child(1){
+    left:20%;
+    top:20%;
+}
+
+.hero-bubbles span:nth-child(2){
+    left:70%;
+    top:30%;
+}
+
+.hero-bubbles span:nth-child(3){
+    left:30%;
+    top:70%;
+}
+
+.hero-bubbles span:nth-child(4){
+    left:80%;
+    top:60%;
+}
+
+@keyframes heroBubble{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+.reveal{
+
+    opacity:0;
+
+    transform:
+    translateY(40px);
+
+    transition:
+    .8s ease;
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+}
+.hero-card{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.hero-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(37,99,235,.05),
+        rgba(14,165,233,.1)
+    );
+
+    pointer-events:none;
+}
+@media(max-width:480px){
+
+    .countdown-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:12px;
+    }
+
+    .count-box{
+
+        padding:20px 10px;
+    }
+
+}
+.action-btn{
+
+    transition:.3s;
+}
+
+.action-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,.15);
+}
+.footer{
+
+    padding:40px 20px 60px;
+
+    text-align:center;
+}
+
+.footer-title{
+
+    font-family:'Lilita One',cursive;
+
+    color:#2563eb;
+
+    font-size:26px;
+}
+
+.footer-subtitle{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    color:#334155;
+}
+
+.footer-date{
+
+    margin-top:8px;
+
+    color:#64748b;
+
+    font-size:14px;
+}
+.invite-label{
+
+    margin-top:10px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 3px 10px rgba(0,0,0,.25);
+}
+
+/* ==========================
+FUN HEADING
+========================== */
+
+h1,
+h2,
+.hero-title,
+.party-label,
+.footer-title{
+
+    font-family:'Lilita One',cursive;
+}
+.invite-label{
+
+    margin-top:8px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:white;
+
+    text-shadow:
+    0 3px 10px rgba(0,0,0,.25);
+}
